@@ -58,7 +58,7 @@ bool AgendaService::deleteUser(std::string userName, std::string password) {
 }
 
 std::list<User> AgendaService::listAllUsers(void) {
-       function<bool(const User&)> k = [](const User& a){
+       function<bool(const User&)> k = [](const User&){
             return true;
        };
        std::list<User> r = storage_->queryUser(k);
